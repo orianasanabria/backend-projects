@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 let products = [];
 
+const textArray = [];
 const message = [];
 
 io.on("connection", (socket) => {
@@ -32,6 +33,13 @@ io.on("connection", (socket) => {
   socket.on("addProd", (prod) => {
     products.push(prod);
     io.sockets.emit("newProd", products);
+  });
+
+  socket.emit("textArray", textArray);
+
+  socket.on("netText", (data) => {
+    textArray.push({ socketid: socket.id, textData: data });
+    io.sockets.emit("textArray", textArray);
   });
 });
 

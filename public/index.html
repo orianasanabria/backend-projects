@@ -29,14 +29,29 @@
 
           <div class="form-group">
             <label for="thumbnail"><b>Thumbnail URL</b></label>
-            <input id="thumbnail" class="form-control" type="text" name="thumbnail" />
+            <input
+              id="thumbnail"
+              class="form-control"
+              type="text"
+              name="thumbnail"
+            />
           </div>
 
           <button class="btn btn-dark px-5 mt-3">Send</button>
         </form>
       </div>
       <div class="mt-5" id="prodList"></div>
+      <div class="chat mt-5">
+        <h2 id="chatTitle" class="display-5">Leave a Message</h2>
+        <textarea class="form-control my-3" id="chatInput" rows="3"></textarea>
+        <button class="btn btn-dark px-5" id="chatButton">Send</button>
+        <table class="table table-striped mt-4">
+          <tbody id="chatTextBox">
+          </tbody>
+        </table>
+      </div>
     </div>
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="./js/script.js"></script>
