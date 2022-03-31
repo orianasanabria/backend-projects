@@ -7,7 +7,7 @@ const fs = require('fs');
 const productList = new Container("./products.json")
 const router = new Router;
 
-router.get('/', function (req, res) {
+router.get('/old', function (req, res) {
 	res.sendFile(path.join(__dirname + '/../views/index.html'));
 });
 

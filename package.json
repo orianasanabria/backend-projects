@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/orianasanabria/backend-projects#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "express-handlebars": "^5.2.0",
+    "socket.io": "^4.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
